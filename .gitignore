@@ -1,1 +1,21 @@
+# 컴파일된 클래스 파일
 *.class
+
+# 빌드 출력 디렉터리
+/bin/
+/out/
+/target/
+
+# IDE 설정
+.idea/
+.vscode/
+*.iml
+*.iws
+.classpath
+.project
+.settings/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+desktop.ini

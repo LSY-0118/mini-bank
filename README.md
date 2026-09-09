@@ -11,15 +11,19 @@ RSA 공개키 암호화를 적용했습니다.
 - `src/Account.java` : 계좌 모델 (잔액, 거래내역)
 - `src/Bank.java` : 계좌 개설/입금/출금/이체 핵심 로직
 - `src/Main.java` : 콘솔 메뉴 (로그인 후 계좌 관리)
+- `src/SmokeTest.java` : RSA 암복호화, 계좌 입출금 등 기본 동작 확인용 스모크 테스트
 - `BUGLOG.md` : SM(유지보수) 실습용 이슈 대응 로그 템플릿 — **꼭 직접 채워보세요**
 
 ## 실행 방법 (로컬 PC, JDK 17 이상 필요)
 
 ```bash
 cd src
-javac *.java
+javac -encoding UTF-8 *.java
 java Main
 ```
+
+> Windows에서는 기본 콘솔 인코딩이 UTF-8이 아니라서 `-encoding UTF-8` 없이 컴파일하면
+> 한글 주석/문자열 때문에 `unmappable character` 오류가 발생할 수 있습니다.
 
 실행 후 데모 계정(아이디: `demo`, 비밀번호: `1234`)으로 로그인하면,
 콘솔에 RSA로 암호화된 비밀번호 값이 출력되는 것을 확인할 수 있습니다.
